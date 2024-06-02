@@ -1,0 +1,308 @@
+/* --------------------- */
+/*     Modern Css Reset */
+/* ---------------------- */
+
+/* // https://piccalil.li/blog/a-modern-css-reset */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/* --------------------- */
+/*    Font Families Import  */
+/* ---------------------- */
+
+
+@font-face {
+    font-family: Figtree;
+    src: url('./assets/fonts/Figtree-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: FigtreeExtraBold;
+    src: url('./assets/fonts/static/Figtree-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: FigtreeSemiBold;
+    src: url('./assets/fonts/static/Figtree-SemiBold.ttf');
+}
+
+/* --------------------- */
+/*    Custom Properties  */
+/* ---------------------- */
+
+
+:root {
+    /* colors  */
+    --clr-black: #111111;
+    --clr-white: #FFFFFF;
+    --clr-yellow: #F4D04E;
+    --clr-gray: #7F7F7F;
+
+    /* font-families  */
+
+    --ff-figtree-regular: Figtree, 'sans';
+    --ff-figtree-bold: FigtreeSemiBold, 'sans-serif';
+    --ff-figtree-extra-bold: FigtreeExtraBold, 'sans-serif';
+
+    /* Typograph  */
+
+    --fs-600: 2rem;
+    --fs-500: 1.75rem;
+    --fs-400: 1.5rem;
+    --fs-300: 1.5rem;
+    --fs-200: 1rem;
+    --fs-100: .875rem;
+}
+
+
+
+/* --------------------- */
+/*    Ulitity Classes    */
+/* ---------------------- */
+/* Font Families  */
+
+.ff-fig-regular {
+    font-family: var(--ff-figtree-regular);
+}
+
+.ff-fig-bold {
+    font-family: var(--ff-figtree-bold);
+}
+
+.ff-fig-extra-bold {
+    font-family: var(--ff-figtree-extra-bold);
+}
+
+
+/* Typography */
+
+
+.fs-600 {
+    font-size: var(--fs-600);
+}
+
+.fs-500 {
+    font-size: var(--fs-500);
+}
+
+.fs-400 {
+    font-size: var(--fs-400);
+}
+
+.fs-300 {
+    font-size: var(--fs-300);
+}
+
+.fs-200 {
+    font-size: var(--fs-200);
+}
+
+.fs-100 {
+    font-size: var(--fs-100);
+}
+
+
+
+/* Colors  */
+
+.bg-black {
+    background-color: var(--clr-black);
+}
+
+.bg-white {
+    background-color: var(--clr-white);
+}
+
+.bg-yellow {
+    background-color: var(--clr-yellow);
+}
+
+.bg-gray {
+    background-color: var(--clr-gray);
+}
+
+
+/* Text  */
+
+.text-black {
+    color: var(--clr-black);
+}
+
+.text-white {
+    color: var(--clr-white);
+}
+
+.text-yellow {
+    color: var(--clr-yellow);
+}
+
+.text-gray {
+    color: var(--clr-gray);
+}
+
+/* line-height  */
+
+.line-height-1{
+    line-height: 2;
+}
+
+
+/* Custom Classes  */
+
+
+.grid {
+    display: grid;
+}
+
+.grid-container {
+    place-content: center;
+}
+
+
+
+/* --------------------- */
+/*    Components          */
+/* ---------------------- */
+
+article.blog-card {
+    width: 21rem;
+    padding: 1.5rem;
+    border-radius: 20px;
+    border: 1px solid var(--clr-black);
+    box-shadow: 10px 10px 0px var(--clr-black);
+    transition: all 200ms ease-in-out;
+}
+
+article.blog-card .container{
+    display: flex;
+    flex-direction: column;
+    gap : 1rem;
+}
+
+.button {
+    font-size: 14px;
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 4px;
+    background-color: var(--clr-yellow);
+}
+
+.blog-img{
+    /* border : 1px solid red; */
+    z-index: 1;
+}
+.blog-img > img{
+    /* z-index: 5; */
+    border-radius: 12px;
+
+    height: 100%;
+    width: 100%;
+}
+
+.author-section{
+    display: flex;
+    align-items: center;
+    gap : 1rem;
+}
+.author-section > picture {
+    border-radius: 100%;
+    width: 32px;
+    height: 32px;
+}
+
+
+/* Hover Effect */
+
+.blog-card:hover{
+    cursor: pointer;
+    box-shadow: 25px 25px 0px var(--clr-black);
+
+}
+.blog-card:hover > .container .content-section #title{
+    color : var(--clr-yellow);
+
+}
+
+
+
+/* Responsive for Small Devices  */
+@media  (min-width: 35rem) {
+    .blog-card{
+        width: 24rem !important;
+    }
+    
+}
