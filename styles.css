@@ -237,8 +237,7 @@ select {
 /* --------------------- */
 /*    Components          */
 /* ---------------------- */
-
-article.blog-card {
+.blog-card {
     width: 21rem;
     padding: 1.5rem;
     border-radius: 20px;
@@ -247,7 +246,7 @@ article.blog-card {
     transition: all 200ms ease-in-out;
 }
 
-article.blog-card .container{
+.blog-card .container{
     display: flex;
     flex-direction: column;
     gap : 1rem;
